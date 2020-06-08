@@ -7,7 +7,6 @@ class Card:
         self.value = value
         self.color = 'black' if suit.endswith(('♠', '♣')) else 'red'
 
-
     def show(self):
         print("{} of {}".format(self.value, self.suit))
 
@@ -47,6 +46,9 @@ class Player:
     def showHand(self):
         for card in self.hand:
             card.show()
+
+    def showLastCard(self):
+        self.hand[-1].show()
             
 deck = Deck()
 deck.shuffle()
